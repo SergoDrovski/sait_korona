@@ -92,20 +92,115 @@
             color: #7B725E;
         }
 
+        .widget-menu .menu__item:last-child {
+            margin-bottom: 30px;
+        }
+
+        .widget-menu .menu {
+            overflow-y: auto;
+            overscroll-behavior-y: contain;
+        }
+
         .pop-up {
-            background-color: #ffffff;
+            background-color: #111;
             display: flex;
-            align-items: center;
             top: 131px;
             bottom: 0;
             position: fixed;
             z-index: 16;
             width: 100vw;
-            height: 100vh;
+            height: 85vh;
+        }
+
+        .pop-up .menu__list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .uc_post_flex_style_one_item {
+            color: #111;
+            font-size: 16px;
+            overflow: hidden;
+            position: relative;
+            flex-direction: column;
+            display: flex;
+
+        }
+
+        .uc_content {
+            flex-grow: 1;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+        }
+
+        .padding {
+            padding: 20px 20px 20px 20px;
+        }
+
+        .uc_post_flex_style_one_image {
+            width: 100%;
+            overflow: hidden;
+            display: block;
+        }
+
+        .uc_post_image {
+            width: 85%;
+            margin: 0 auto;
+        }
+
+        .uc_post_image img {
+            height: auto;
+            object-fit: contain;
+        }
+
+        .uc_post_image img {
+            width: 100%;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .uc_title {
+            font-size: 17px;
+            font-weight: 300;
+            margin-top: 0px;
+            text-align: center;
+        }
+
+        .ue-description {
+            color: #A7997B;
+            font-size: 10px;
+            font-weight: 400;
+            margin-top: 10px;
+        }
+
+        .uc_title a {
+            color: #A7997B;
+        }
+
+        .ves {
+            color: #c3c3c3;
+            font-size: 12px;
+            text-align: center;
+        }
+        .ves:before {
+            background: #c3c3c3;
+            content: "\020";
+            display: block;
+            height: 1px;
+            margin: 10px 0 6px 0;
+            width: 50%;
+            transform: translateX(50%);
+        }
+
+        .uc_price {
+            color: #A7997B;
+            font-weight: 300;
+            margin: 18px 0px 0px 0px;
         }
 
     </style>
-    <div class="widget-menu" style="display: none;">
+    <div class="widget-menu">
         <nav class="navigate-menu navigate-menu__mob">
             <ul class="nav-list">
                 <li class="menu-item"><a href="#zavtrak">Завтраки</a>
@@ -135,27 +230,161 @@
             </ul>
         </nav>
         <div class="pop-up animated_wipe_popup  ">
-            <span class="pop-up__btnClose pop-up__close aniOpen"></span>
-            <div class="pop-up__content "><h2 class="pop-up__title">Уборка квартир </h2>
-                <div class="about__form-text form__text"><p>Комплексная уборка квартиры длится от 4 до 7 часов и содержит
-                    порядка 25 видов работ. </p>
-                    <br> <b>Цена от 2 500₽</b>
-                </div>
-                <div class="pop-up__button-list"><a>Посмотреть список всех работ</a></div>
-                <form class="form" method="post" action="/api/send?id=957527617">
-                    <div class="form__input-wrapper form-item form-text name"><input class="form__input wm-input-default"
-                                                                                     name="name" placeholder="* Ваше имя: "
-                                                                                     type="text" size="1" maxlength="100"
-                                                                                     required=""></div>
-                    <div class="form__input-wrapper form-item form-text phone"><input class="form__input wm-input-default"
-                                                                                      name="phone" placeholder="* Телефон: "
-                                                                                      type="text" size="1" maxlength="100"
-                                                                                      required=""></div>
-                    <div class="form__button-wrapper form-submit">
-                        <button class="pulse__full form__button wm-input-default" type="submit" id="#">Заказать</button>
+            <section class="menu bt">
+                <div class="container">
+                    <div class="menu__wrap">
+                        <h2 class="menu__title title">Завтраки</h2>
+                        <div class="menu__column">
+                            <ul class="menu__list">
+                                <li class="menu__item">
+                                    <div class="uc_post_flex_style_one_item ue-item">
+                                        <div class="uc_post_flex_style_one_image">
+                                            <div class="uc_post_image">
+                                                <img decoding="async" src="https://cafekrasnodar.ru/wp-content/uploads/2023/03/Брускетта-с-баклажаном-и-страчателлой.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="uc_content padding">
+                                            <div class="uc_title"><a href="#">Брускетта с баклажаном и страчателлой  </a>
+                                                <p class="ves"><a href="#">170 г</a></p>
+                                            </div>
+                                            <div class="ue-description">В 100 г.: Жиры: 14,90 Белки: 3,90 Углеводы: 21,00 Ккал: 235,40</div>
+                                            <div class="ue_grid_item_bottom">
+                                                <div class="ue_grid_prices">
+                                                    <div class="uc_price">
+                                                        <span class="woocommerce-Price-amount amount"><bdi>540<span class="woocommerce-Price-currencySymbol">₽</span></bdi></span>
+                                                    </div>
+                                                </div>
+                                                <div class="uc_post_flex_style_one_button">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="menu__item">
+                                    <div class="uc_post_flex_style_one_item ue-item">
+                                        <div class="uc_post_flex_style_one_image">
+                                            <div class="uc_post_image">
+                                                <img decoding="async" src="https://cafekrasnodar.ru/wp-content/uploads/2023/03/Брускетта-с-баклажаном-и-страчателлой.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="uc_content padding">
+                                            <div class="uc_title"><a href="#">Брускетта с баклажаном и страчателлой  </a>
+                                                <p class="ves"><a href="#">170 г</a></p>
+                                            </div>
+                                            <div class="ue-description">В 100 г.: Жиры: 14,90 Белки: 3,90 Углеводы: 21,00 Ккал: 235,40</div>
+                                            <div class="ue_grid_item_bottom">
+                                                <div class="ue_grid_prices">
+                                                    <div class="uc_price">
+                                                        <span class="woocommerce-Price-amount amount"><bdi>540<span class="woocommerce-Price-currencySymbol">₽</span></bdi></span>
+                                                    </div>
+                                                </div>
+                                                <div class="uc_post_flex_style_one_button">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="menu__item">
+                                    <div class="uc_post_flex_style_one_item ue-item">
+                                        <div class="uc_post_flex_style_one_image">
+                                            <div class="uc_post_image">
+                                                <img decoding="async" src="https://cafekrasnodar.ru/wp-content/uploads/2023/03/Брускетта-с-баклажаном-и-страчателлой.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="uc_content padding">
+                                            <div class="uc_title"><a href="#">Брускетта с баклажаном и страчателлой  </a>
+                                                <p class="ves"><a href="#">170 г</a></p>
+                                            </div>
+                                            <div class="ue-description">В 100 г.: Жиры: 14,90 Белки: 3,90 Углеводы: 21,00 Ккал: 235,40</div>
+                                            <div class="ue_grid_item_bottom">
+                                                <div class="ue_grid_prices">
+                                                    <div class="uc_price">
+                                                        <span class="woocommerce-Price-amount amount"><bdi>540<span class="woocommerce-Price-currencySymbol">₽</span></bdi></span>
+                                                    </div>
+                                                </div>
+                                                <div class="uc_post_flex_style_one_button">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="menu__item">
+                                    <div class="uc_post_flex_style_one_item ue-item">
+                                        <div class="uc_post_flex_style_one_image">
+                                            <div class="uc_post_image">
+                                                <img decoding="async" src="https://cafekrasnodar.ru/wp-content/uploads/2023/03/Брускетта-с-баклажаном-и-страчателлой.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="uc_content padding">
+                                            <div class="uc_title"><a href="#">Брускетта с баклажаном и страчателлой  </a>
+                                                <p class="ves"><a href="#">170 г</a></p>
+                                            </div>
+                                            <div class="ue-description">В 100 г.: Жиры: 14,90 Белки: 3,90 Углеводы: 21,00 Ккал: 235,40</div>
+                                            <div class="ue_grid_item_bottom">
+                                                <div class="ue_grid_prices">
+                                                    <div class="uc_price">
+                                                        <span class="woocommerce-Price-amount amount"><bdi>540<span class="woocommerce-Price-currencySymbol">₽</span></bdi></span>
+                                                    </div>
+                                                </div>
+                                                <div class="uc_post_flex_style_one_button">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="menu__item">
+                                    <div class="uc_post_flex_style_one_item ue-item">
+                                        <div class="uc_post_flex_style_one_image">
+                                            <div class="uc_post_image">
+                                                <img decoding="async" src="https://cafekrasnodar.ru/wp-content/uploads/2023/03/Брускетта-с-баклажаном-и-страчателлой.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="uc_content padding">
+                                            <div class="uc_title"><a href="#">Брускетта с баклажаном и страчателлой  </a>
+                                                <p class="ves"><a href="#">170 г</a></p>
+                                            </div>
+                                            <div class="ue-description">В 100 г.: Жиры: 14,90 Белки: 3,90 Углеводы: 21,00 Ккал: 235,40</div>
+                                            <div class="ue_grid_item_bottom">
+                                                <div class="ue_grid_prices">
+                                                    <div class="uc_price">
+                                                        <span class="woocommerce-Price-amount amount"><bdi>540<span class="woocommerce-Price-currencySymbol">₽</span></bdi></span>
+                                                    </div>
+                                                </div>
+                                                <div class="uc_post_flex_style_one_button">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="menu__item">
+                                    <div class="uc_post_flex_style_one_item ue-item">
+                                        <div class="uc_post_flex_style_one_image">
+                                            <div class="uc_post_image">
+                                                <img decoding="async" src="https://cafekrasnodar.ru/wp-content/uploads/2023/03/Брускетта-с-баклажаном-и-страчателлой.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="uc_content padding">
+                                            <div class="uc_title"><a href="#">Брускетта с баклажаном и страчателлой  </a>
+                                                <p class="ves"><a href="#">170 г</a></p>
+                                            </div>
+                                            <div class="ue-description">В 100 г.: Жиры: 14,90 Белки: 3,90 Углеводы: 21,00 Ккал: 235,40</div>
+                                            <div class="ue_grid_item_bottom">
+                                                <div class="ue_grid_prices">
+                                                    <div class="uc_price">
+                                                        <span class="woocommerce-Price-amount amount"><bdi>540<span class="woocommerce-Price-currencySymbol">₽</span></bdi></span>
+                                                    </div>
+                                                </div>
+                                                <div class="uc_post_flex_style_one_button">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </form>
-            </div>
+                </div>
+            </section>
         </div>
     </div>
   <div class="content-container">
