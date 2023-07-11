@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
 @font-face {
   font-family: "GothamMedium";
   src: url("./fonts/GothamMedium.woff") format("woff"),
@@ -19,8 +20,8 @@ body {
   padding: 0;
   padding-bottom: 50px;
   color: #a79162;
-  font-family: "GothamMedium", Sans-serif;
-  font-size: 15px;
+  font-family: "Comfortaa", Sans-serif;
+  font-size: 19px;
   line-height: 1.5em;
   background-color: #050505;
   background-image: url(./image/bckg4.jpg);
@@ -71,9 +72,9 @@ h6 {
   align-items: center;
   justify-content: center;
   width: 100%;
+  min-height: 54px;
   position: relative;
-  line-height: 1;
-  font-family: "GothamBold", Sans-serif;
+  font-family: "Comfortaa", Sans-serif;
   font-weight: 700;
   fill: #a79162;
   color: #a79162;
@@ -103,15 +104,18 @@ h6 {
   fill: #000;
 }
 .title {
-  font-family: "GothamBold", Sans-serif;
+  font-weight: 700;
   font-size: 22px;
   margin-bottom: 30px;
   text-align: center;
-  padding-top: 20px;
+}
+
+.bt .container {
+  padding-top: 40px;
   border-top: 1px solid #a79162;
 }
 
-.content-container {
+/* .content-container {
   max-width: 850px;
   display: flex;
   margin-right: auto;
@@ -123,8 +127,7 @@ h6 {
   .content-container {
     max-width: 850px;
   }
-}
-
+} */
 
 /* ----------------header----------------- */
 .header__wrap {
@@ -144,7 +147,7 @@ h6 {
   justify-content: center;
 }
 
-.logo--mob{
+.logo--mob {
   display: none;
 }
 
@@ -188,7 +191,7 @@ h6 {
   border: 1px solid;
 }
 
-.navbar-toggle .icon-bar+.icon-bar {
+.navbar-toggle .icon-bar + .icon-bar {
   margin-top: 4px;
 }
 
@@ -224,13 +227,12 @@ h6 {
   animation-fill-mode: forwards;
 }
 
-
 @media (max-width: 480px) {
   .logo {
     width: 25%;
   }
 
-  .header--mob{
+  .header--mob {
     background-color: #000000;
     position: fixed;
     top: 0;
@@ -248,11 +250,11 @@ h6 {
     display: block;
   }
 
-  .logo--mob{
+  .logo--mob {
     display: block;
     margin-right: 65px;
   }
-  .logo--desc{
+  .logo--desc {
     display: none;
   }
 }
@@ -328,10 +330,7 @@ h6 {
   }
 }
 
-
 /* -------------widget-menu--------------------- */
-
-
 
 /* -------------preview--------------------- */
 .preview {
@@ -397,7 +396,7 @@ h6 {
 }
 .menu__item {
   display: flex;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   max-width: 500px;
 }
 
@@ -421,7 +420,6 @@ h6 {
 .qs-datepicker-container {
   margin: 5px;
   font-size: 1rem;
-  font-family: sans-serif;
   color: #000;
   position: absolute;
   width: 15.625em;
@@ -689,10 +687,9 @@ h6 {
   margin-bottom: 25px;
 }
 .form-input .form-label {
-  font-family: "GothamBold", Sans-serif;
   position: absolute;
   pointer-events: none;
-  font-weight: 600;
+  font-weight: 700;
   left: 0;
   top: -5px;
   color: #a79162;
@@ -780,4 +777,5 @@ h6 {
 .contacts__text {
   font-size: 16px;
   line-height: 22px;
+  font-weight: 300;
 }
