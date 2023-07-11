@@ -12,6 +12,10 @@
     url("./fonts/GothamBold.ttf") format("truetype");
 }
 
+:root {
+  --main-text-color: #A7997B;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -19,10 +23,10 @@ body {
   margin: 0;
   padding: 0;
   padding-bottom: 50px;
-  color: #a79162;
+  color: var(--main-text-color);
   font-family: "Comfortaa", Sans-serif;
-  font-size: 19px;
-  line-height: 1.5em;
+  font-size: 17px;
+  line-height:26px;
   background-color: #050505;
   background-image: url(./image/bckg4.jpg);
   background-position: top center;
@@ -33,7 +37,6 @@ body {
 
 img {
   max-width: 100%;
-  height: auto;
 }
 ul {
   padding: 0;
@@ -76,14 +79,14 @@ h6 {
   position: relative;
   font-family: "Comfortaa", Sans-serif;
   font-weight: 700;
-  fill: #a79162;
-  color: #a79162;
+  fill: var(--main-text-color);
+  color: var(--main-text-color);
   font-size: 15px;
   padding: 15px 30px;
   background-color: transparent;
   border-style: solid;
   border-width: 2px 2px 2px 2px;
-  border-color: #a79162;
+  border-color: var(--main-text-color);
   border-radius: 0px 0px 0px 0px;
   text-align: center;
   text-transform: uppercase;
@@ -96,7 +99,7 @@ h6 {
 }
 
 .btn:hover {
-  background-color: #a79162;
+  background-color: var(--main-text-color);
   color: #000;
 }
 
@@ -112,22 +115,12 @@ h6 {
 
 .bt .container {
   padding-top: 40px;
-  border-top: 1px solid #a79162;
+  border-top: 1px solid var(--main-text-color);
 }
 
-/* .content-container {
-  max-width: 850px;
-  display: flex;
-  margin-right: auto;
-  margin-left: auto;
-  flex-direction: column;
+section {
+  margin-bottom: 150px;
 }
-
-@media(max-width: 1024px) {
-  .content-container {
-    max-width: 850px;
-  }
-} */
 
 /* ----------------header----------------- */
 .header__wrap {
@@ -183,7 +176,7 @@ h6 {
 .navbar-toggle .icon-bar {
   display: block;
   position: relative;
-  background: #a79162;
+  background: var(--main-text-color);
   width: 24px;
   height: 3px;
   border-radius: 1px;
@@ -333,9 +326,6 @@ h6 {
 /* -------------widget-menu--------------------- */
 
 /* -------------preview--------------------- */
-.preview {
-  margin-bottom: 150px;
-}
 
 .preview__wrap {
   text-align: center;
@@ -344,12 +334,13 @@ h6 {
 
 .preview__title {
   border-top: none;
+  font-size: 30px;
+  line-height: 30px;
 }
 
 /* ------------------------interior------------------ */
 .interior {
   text-align: center;
-  margin-bottom: 150px;
 }
 
 .interior__description {
@@ -379,17 +370,17 @@ h6 {
 }
 
 /* ------------------menu--------------- */
-
-.menu {
-  margin-bottom: 150px;
-}
-.menu__wrap {
+.menu__column {
   display: flex;
   justify-content: space-between;
+}
+.menu__left {
+  margin-right: 20px;
 }
 
 .menu__subtitle {
   text-align: center;
+  margin-bottom: 20px;
 }
 .menu__img {
   margin-right: 15px;
@@ -402,11 +393,12 @@ h6 {
 
 .menu__name {
   width: max-content;
-  margin-bottom: 5px;
-  border-bottom: 1px solid #a79162;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--main-text-color);
 }
 .menu__description {
   line-height: 18px;
+  font-weight: 300;
 }
 
 .menu__inner {
@@ -658,10 +650,6 @@ h6 {
   cursor: not-allowed;
 }
 
-.book {
-  margin-bottom: 150px;
-}
-
 .book__form {
   max-width: 380px;
   margin: 0 auto;
@@ -671,10 +659,10 @@ h6 {
   width: 100%;
   display: block;
   border: none;
-  border-bottom: 2px solid #a79162;
+  border-bottom: 2px solid var(--main-text-color);
   background: 0 0;
   height: 30px;
-  color: #a79162;
+  color: var(--main-text-color);
   outline: 0;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -692,7 +680,7 @@ h6 {
   font-weight: 700;
   left: 0;
   top: -5px;
-  color: #a79162;
+  color: var(--main-text-color);
   overflow: hidden;
   line-height: 40px;
   -webkit-transition: 0.3s;
@@ -759,7 +747,7 @@ h6 {
   width: 100%;
   margin-bottom: 50px;
 }
-.contacts__wrap {
+.contacts__inner {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -778,4 +766,35 @@ h6 {
   font-size: 16px;
   line-height: 22px;
   font-weight: 300;
+}
+
+@media(max-width: 767px) {
+  .preview__title {
+    font-size: 22px;
+    line-height: 27px;
+}
+.btn-wrap {
+  width: 270px;
+  margin-top: 50px;
+}
+.btn {
+  padding: 10px 30px;
+  font-size: 12px;
+  min-height: 47px;
+}
+.btn-icon svg {
+  width: 15px;
+  height: 15px;
+}
+.preview__wrap {
+ 
+  padding: 0;
+  padding-top: 120px;
+}
+.interior__description {
+  padding: 0;
+}
+section {
+  margin-bottom: 80px;
+}
 }
