@@ -43,16 +43,6 @@
       </div>
     </header>
     <style>
-        .navigate-menu {
-            position: fixed;
-            width: 100%;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            top: 75px;
-            background-color: #000000;
-            z-index: 17;
-        }
-
         .nav-list {
             display: flex;
             flex-wrap: nowrap;
@@ -92,24 +82,30 @@
             color: #7B725E;
         }
 
+        .widget-menu {
+            background-color: #111;
+            display: flex;
+            top: 75px;
+            bottom: 0;
+            position: fixed;
+            flex-direction: column;
+            z-index: 16;
+            width: 100vw;
+        }
+
+
         .widget-menu .menu__item:last-child {
             margin-bottom: 30px;
         }
 
         .widget-menu .menu {
-            overflow-y: auto;
-            overscroll-behavior-y: contain;
+            padding-top: 20px;
+            margin-bottom: 15px;
         }
 
         .pop-up {
-            background-color: #111;
-            display: flex;
-            top: 131px;
-            bottom: 0;
-            position: fixed;
-            z-index: 16;
-            width: 100vw;
-            height: 85vh;
+            overscroll-behavior-y: contain;
+            overflow-y: auto;
         }
 
         .pop-up .menu__list {
@@ -197,6 +193,54 @@
             color: #A7997B;
             font-weight: 300;
             margin: 18px 0px 0px 0px;
+        }
+
+        @media(min-width: 768px) {
+            body {
+                overflow-y: hidden;
+            }
+
+            .widget-menu {
+                top: 0;
+                flex-direction: row;
+            }
+
+            .widget-menu .container {
+                 max-width: 100%;
+            }
+
+
+            .nav-list {
+                overflow-x: hidden;
+                flex-direction: column;
+                padding: 75px 10px 15px 20px;
+            }
+            .navigate-menu {
+                min-width: 200px;
+                width: 20%;
+                border-right: 1px solid var(--main-text-color);
+            }
+            .menu-item a {
+                width: fit-content;
+            }
+            .header__button-menu {
+                display: block;
+                position: fixed;
+                z-index: 17;
+                top: 0;
+                left: 0;
+            }
+
+            .menu__item {
+                display: flex;
+                margin-bottom: 20px;
+                max-width: 500px;
+                width: 50%;
+            }
+            .pop-up .menu__list {
+                justify-content: center;
+            }
+
         }
 
     </style>
