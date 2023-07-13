@@ -64,6 +64,7 @@ h6 {
   margin: 0;
 }
 .btn-wrap {
+  position: relative;
   width: 305px;
   margin: 0 auto;
   margin-top: 60px;
@@ -90,21 +91,46 @@ h6 {
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
-  transition: all 0.3s;
+  /* transition: all 0.3s; */
+  transition: all .3s cubic-bezier(.78,.2,.21,.88),color 0s;
+  
 }
 
 .btn-icon {
   margin-right: 16px;
 }
-
 .btn:hover {
+  animation: btn 500ms 0s;
+}
+
+  @keyframes btn {
+    0% {
+      right: -6px;
+      bottom: -6px;
+      /* transform: rotate(135deg); */
+    }
+    45% {
+      right: -6px;
+      bottom: -6px;
+    }
+    75% {
+      right: -6px;
+      bottom: -6px;
+    }
+    100% {
+      right: -6px;
+      bottom: -6px;
+    }
+  }
+
+/* .btn:hover {
   background-color: var(--main-text-color);
   color: #000;
 }
 
 .btn:hover path {
   fill: #000;
-}
+} */
 .title {
   font-weight: 700;
   font-size: 22px;
@@ -222,6 +248,44 @@ section:last-child {
   animation-fill-mode: forwards;
 }
 
+.mkdf-btn-top-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  z-index: 0;
+  transition: 0s .3s;
+}
+.mkdf-btn-right-line {
+  position: absolute;
+  top: 6px;
+  right: -6px;
+  width: 1px;
+  height: 100%;
+  background-color: #fff;
+  z-index: 0;
+}
+.mkdf-btn-bottom-line {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  z-index: 0;
+}
+.mkdf-btn-left-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  height: 0;
+  background-color: #fff;
+  z-index: 0;
+  transition: 0s .3s;
+}
 @keyframes topbar-back {
   0% {
     top: 6px;
