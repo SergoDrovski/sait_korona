@@ -438,7 +438,6 @@ section:last-child {
   }
 }
 
-/* -------------widget-menu--------------------- */
 
 /* -------------preview--------------------- */
 
@@ -765,4 +764,254 @@ section:last-child {
     font-size: 13px;
     line-height: 20px;
   }
+}
+
+/* ------------------widget-menu------------------ */
+
+.widget-menu .nav-list {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  list-style: none;
+  margin: 0;
+  padding: 5px;
+  line-height: normal;
+}
+
+.widget-menu .menu-item {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+.widget-menu .menu-item a {
+  font-size: 15px;
+  color: #A7997B;
+  padding: 13px 6px;
+  line-height: 20px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  transition: .4s;
+}
+
+.widget-menu .menu-item a:hover {
+  background-color: #dbbda6 !important;
+  border-radius: 30px !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+
+  color: #7B725E;
+}
+
+.widget-menu {
+  background-color: #111;
+  display: flex;
+  top: 75px;
+  bottom: 0;
+  position: fixed;
+  flex-direction: column;
+  z-index: 16;
+  width: 100vw;
+}
+
+.widget-menu {
+  display: none;
+}
+
+
+.widget-menu .menu__item:last-child {
+  margin-bottom: 30px;
+}
+
+.widget-menu .menu {
+  padding-top: 20px;
+  margin-bottom: 15px;
+}
+
+.list-menu {
+  overscroll-behavior-y: contain;
+  overflow-y: auto;
+}
+
+.list-menu .menu__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.uc_post_flex_style_one_item {
+  color: #111;
+  font-size: 16px;
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+  display: flex;
+
+}
+
+.uc_content {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.padding {
+  padding: 20px 20px 20px 20px;
+}
+
+.uc_post_flex_style_one_image {
+  width: 100%;
+  overflow: hidden;
+  display: block;
+}
+
+.uc_post_image {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.uc_post_image img {
+  height: auto;
+  object-fit: contain;
+}
+
+.uc_post_image img {
+  width: 100%;
+  display: block;
+  transition: 0.3s;
+}
+
+.uc_title {
+  font-size: 17px;
+  font-weight: 300;
+  margin-top: 0px;
+  text-align: center;
+}
+
+.ue-description {
+  color: #A7997B;
+  font-size: 10px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.uc_title a {
+  color: #A7997B;
+}
+
+.ves {
+  color: #c3c3c3;
+  font-size: 12px;
+  text-align: center;
+}
+.ves:before {
+  background: #c3c3c3;
+  content: "\020";
+  display: block;
+  height: 1px;
+  margin: 10px 0 6px 0;
+  width: 50%;
+  transform: translateX(50%);
+}
+
+.uc_price {
+  color: #A7997B;
+  font-weight: 300;
+  margin: 18px 0px 0px 0px;
+}
+
+.widget-menu.show .navigate-menu {
+  animation: top-menu 1.5s 1;
+}
+
+.widget-menu.show .list-menu {
+  animation: bottom-menu 1.5s 1;
+}
+
+.widget-menu.show {
+  display: flex;
+}
+
+@keyframes bottom-menu {
+  0% {
+    opacity: 0.5;
+    transform: translate3d(0,100%,0);
+  }
+  50% {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+}
+
+
+@keyframes top-menu {
+  0% {
+    opacity: 0;
+    transform: translate3d(0,-100%,0);
+  }
+  50% {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+}
+
+
+@media(min-width: 768px) {
+  /*body {*/
+  /*    overflow-y: hidden;*/
+  /*}*/
+
+  .widget-menu {
+    top: 0;
+    flex-direction: row;
+  }
+
+  .widget-menu .container {
+    max-width: 100%;
+  }
+
+
+  .widget-menu .nav-list {
+    overflow-x: hidden;
+    flex-direction: column;
+    padding: 75px 10px 15px 20px;
+  }
+  .widget-menu .navigate-menu {
+    min-width: 200px;
+    width: 20%;
+    border-right: 1px solid var(--main-text-color);
+  }
+  .widget-menu .menu-item a {
+    width: fit-content;
+  }
+  .header__button-menu {
+    display: block;
+    position: fixed;
+    z-index: 17;
+    top: 0;
+    left: 0;
+  }
+
+  .widget-menu .menu__item {
+    display: flex;
+    margin-bottom: 20px;
+    max-width: 500px;
+    width: 50%;
+  }
+  .list-menu .menu__list {
+    justify-content: center;
+  }
+
+  .navbar-toggle .icon-bar {
+    display: block;
+    position: relative;
+    background: var(--main-text-color);
+    width: 27px;
+    height: 4px;
+  }
+
 }
