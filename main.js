@@ -12,17 +12,17 @@ const swiperQuestions = new Swiper(".slider-gallery", {
   //     crossFade: true,
   // },
   spaceBetween: 20,
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-      },
-      720: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 3,
-      },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
     },
+    720: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
   simulateTouch: true,
 });
 
