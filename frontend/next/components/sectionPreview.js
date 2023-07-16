@@ -16,7 +16,7 @@ export default function preview({ data }) {
                         {descriptionPreview ?? ''}
                     </p>
                     <div className="btn-wrap btn-outer-outline">
-                        <button className="preview__btn btn">
+                        <a className="preview__btn btn" href="#order">
                                 <span className="book__btn-icon btn-icon"
                                 ><svg
                                     width="20"
@@ -32,7 +32,7 @@ export default function preview({ data }) {
                                   </svg>
                                 </span>
                                             <span>{data.buttonPreview.label ?? ''}</span>
-                        </button>
+                        </a>
                         <div className="btn-top-line"></div>
                         <div className="btn-right-line"></div>
                         <div className="btn-bottom-line"></div>

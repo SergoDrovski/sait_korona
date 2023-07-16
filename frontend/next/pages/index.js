@@ -21,8 +21,8 @@ export async function getStaticProps() {
     }
 }
 
-export default function Home({homepage, services, reviews}) {
-    const collectionMenu = delve(homepage, "data.categories.data");
+export default function Home({homepage, categories}) {
+    const collectionMenu = delve(categories, "data");
     const content = delve(homepage, "data.attributes");
 
 

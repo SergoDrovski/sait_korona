@@ -815,12 +815,12 @@ section.contacts {
     transition: .4s;
 }
 
-.widget-menu .menu-item a:hover {
+.widget-menu .menu-item a:hover,
+.widget-menu .menu-item a.active {
     background-color: #dbbda6 !important;
     border-radius: 30px !important;
     padding-left: 12px !important;
     padding-right: 12px !important;
-
     color: #7B725E;
 }
 
