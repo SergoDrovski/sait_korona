@@ -237,10 +237,6 @@ section:last-child {
   display: none;
 }
 
-.header__button-menu {
-  display: none;
-}
-
 .button-menu .navbar-toggle {
   padding: 10px;
   width: 45px;
@@ -988,7 +984,8 @@ section:last-child {
   .widget-menu .menu-item a {
     width: fit-content;
   }
-  .header__button-menu {
+
+  .header__button-menu.active-button {
     display: block;
     position: fixed;
     z-index: 17;

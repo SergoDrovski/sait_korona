@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_layout_logos",
+  "info": {
+    "displayName": "Logo"
+  },
+  "options": {},
+  "attributes": {
+    "titleImg": {
+      "type": "string",
+      "required": false,
+      "default": "Клининговая компания Добрая Фея"
+    },
+    "alt": {
+      "type": "string",
+      "default": "логотип компании"
+    },
+    "imgUrl": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

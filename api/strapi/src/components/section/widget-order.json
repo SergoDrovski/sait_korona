@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_section_widget_orders",
+  "info": {
+    "displayName": "widgetOrder",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "form": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.form"
+    },
+    "input": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.input"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.button"
+    }
+  }
+}

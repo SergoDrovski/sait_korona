@@ -1,0 +1,29 @@
+version: '3.9'
+services:
+  gateway:
+    build:
+      context: ./gateway/docker/prod/nginx
+      dockerfile: Dockerfile
+    volumes:
+      - '/etc/letsencrypt:/etc/letsencrypt:ro'
+      - '/var/www/html:/var/www/html:ro'
+    ports:
+      - '80:80'
+      - '443:443'
+    depends_on:
+      - strapi
+      - frontend
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: docker/prod/next/Dockerfile
+
+
+  strapi:
+    build:
+      context: ./api
+      dockerfile: docker/prod/node-strapi/Dockerfile
+    volumes:
+      - './api/strapi/data.db:/app/strapi/data.db'
+      - './api/strapi/public/uploads:/app/strapi/public/uploads'

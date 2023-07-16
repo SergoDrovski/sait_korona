@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_layout_forms",
+  "info": {
+    "displayName": "form",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titleForm": {
+      "type": "string"
+    },
+    "descriptionForm": {
+      "type": "string"
+    },
+    "titleSuccess": {
+      "type": "string"
+    },
+    "descriptionSuccess": {
+      "type": "text"
+    }
+  }
+}

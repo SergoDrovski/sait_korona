@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_section_custom_lists",
+  "info": {
+    "displayName": "foodList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titleList": {
+      "type": "string"
+    },
+    "foods": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::food.food"
+    }
+  }
+}

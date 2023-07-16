@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_layout_inputs",
+  "info": {
+    "displayName": "input",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "nameInput": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "placeholder": {
+      "type": "string"
+    },
+    "required": {
+      "type": "boolean"
+    }
+  }
+}

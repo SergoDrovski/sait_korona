@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_section_top_menus",
+  "info": {
+    "displayName": "topMenu",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titleMenu": {
+      "type": "string"
+    },
+    "buttonMenu": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.button"
+    },
+    "foodList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "section.custom-list"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_section_item_foods",
+  "info": {
+    "displayName": "itemFood"
+  },
+  "options": {},
+  "attributes": {
+    "titleFood": {
+      "type": "string"
+    },
+    "imageFood": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "descriptionFood": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_section_previews",
+  "info": {
+    "displayName": "preview",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "buttonPreview": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.button"
+    },
+    "descriptionPreview": {
+      "type": "text"
+    },
+    "link": {
+      "type": "string"
+    },
+    "titlePreview": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_layout_headers",
+  "info": {
+    "displayName": "header",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titleHeader": {
+      "type": "string"
+    },
+    "logoHeader": {
+      "displayName": "Logo",
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.logo"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_section_abouts",
+  "info": {
+    "displayName": "About",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titleAbout": {
+      "type": "string"
+    },
+    "textAbout": {
+      "type": "richtext"
+    },
+    "link": {
+      "type": "string"
+    },
+    "gallereya": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
