@@ -799,7 +799,7 @@ section.contacts {
 .widget-menu .menu-item {
     display: block;
     list-style: none;
-    margin: 0;
+    margin: 3px;
     padding: 0;
     line-height: normal;
 }
@@ -836,7 +836,8 @@ section.contacts {
 }
 
 .widget-menu {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
 }
 
 
@@ -849,7 +850,8 @@ section.contacts {
     margin-bottom: 15px;
 }
 
-.list-menu {
+.widget-menu .list-menu {
+    flex-grow: 1;
     overscroll-behavior-y: contain;
     overflow-y: auto;
 }
@@ -951,6 +953,8 @@ section.contacts {
 
 .widget-menu.show {
     display: flex;
+    opacity: 1;
+    visibility: visible;
 }
 
 @keyframes bottom-menu {
@@ -998,7 +1002,7 @@ section.contacts {
         padding: 75px 10px 15px 20px;
     }
     .widget-menu .navigate-menu {
-        min-width: 200px;
+        min-width: 250px;
         width: 20%;
         border-right: 1px solid var(--main-text-color);
     }
@@ -1016,7 +1020,7 @@ section.contacts {
     .widget-menu .menu__item {
         display: flex;
         margin-bottom: 20px;
-        max-width: 500px;
+        max-width: 400px;
         width: 50%;
     }
     .list-menu .menu__list {

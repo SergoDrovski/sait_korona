@@ -49,6 +49,10 @@
     },
     "massa": {
       "type": "string"
+    },
+    "url": {
+      "type": "uid",
+      "targetField": "name"
     }
   }
 }

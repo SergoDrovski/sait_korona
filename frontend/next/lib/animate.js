@@ -36,6 +36,7 @@ export function scroll() {
                     behavior: 'smooth'
                 });
             }
+            // добавить путь в урл
             return true;
         })
     })

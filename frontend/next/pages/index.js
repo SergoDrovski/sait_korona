@@ -1,10 +1,10 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import delve from "dlv";
 import Head from 'next/head'
 import WidgetMenu from '../components/widgetMenu';
 import Content from '../components/content';
 import {getStrapiData} from '@/lib/api/apiSer';
-import {imageLoader} from "@/lib/image";
+import {scroll} from "@/lib/animate";
 
 export async function getStaticProps() {
     try {
@@ -22,6 +22,10 @@ export async function getStaticProps() {
 }
 
 export default function Home({homepage, categories}) {
+    useEffect(() => {
+        scroll();
+    }, [""]);
+
     const collectionMenu = delve(categories, "data");
     const content = delve(homepage, "data.attributes");
 
