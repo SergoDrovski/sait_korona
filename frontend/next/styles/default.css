@@ -67,6 +67,8 @@ h6 {
 
 .overflowY {
     overflow-y: hidden;
+    touch-action: none;
+    -ms-touch-action: none;
 }
 
 .overflowX {
@@ -836,8 +838,14 @@ section.contacts {
 }
 
 .widget-menu {
-    opacity: 0;
-    visibility: hidden;
+    display: none;
+}
+
+.widget-menu.close {
+    animation: 2s ease 1ms forwards menu-close;
+    display: flex;
+    /*opacity: 0;*/
+    /*visibility: hidden;*/
 }
 
 
@@ -923,10 +931,16 @@ section.contacts {
 }
 
 .ves {
-    color: #c3c3c3;
+    color: #A7997B;
     font-size: 12px;
     text-align: center;
 }
+
+.ves span {
+    font-size: 16px;
+}
+
+
 .ves:before {
     background: #c3c3c3;
     content: "\020";
@@ -951,10 +965,56 @@ section.contacts {
     animation: bottom-menu 1.5s 1;
 }
 
+.widget-menu.close .navigate-menu {
+    animation: 1.5s ease 1ms forwards top-menu-close;
+}
+
+.widget-menu.close .list-menu {
+    animation: 1.5s ease 1ms forwards bottom-menu-close;
+}
+
 .widget-menu.show {
+    animation: none;
     display: flex;
     opacity: 1;
     visibility: visible;
+}
+
+@keyframes menu-close {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes bottom-menu-close {
+    0% {
+        opacity: 1;
+        visibility: visible;
+        transform: translate3d(0,0,0);
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translate3d(0,100%,0);
+    }
+}
+
+@keyframes top-menu-close {
+    0% {
+        opacity: 1;
+        visibility: visible;
+        transform: translate3d(0,0,0);
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translate3d(0,-100%,0);
+    }
 }
 
 @keyframes bottom-menu {

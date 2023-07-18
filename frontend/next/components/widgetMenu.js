@@ -2,12 +2,14 @@
 import delve from "dlv";
 import Image from 'next/image';
 import {imageLoader} from "@/lib/image";
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
+import {scroll} from "@/lib/animate";
 
 function CategoryList ({list, setStateMenu, stateMenu}) {
 
     function handleChangeMenu(e) {
         e.preventDefault();
+        e.target.scrollIntoView({inline: "center", behavior: "smooth"});
         let i = e.target.dataset.key;
         setStateMenu({activeCategory: i});
     }
@@ -62,25 +64,10 @@ function MenuList ({list, stateMenu}) {
                     </div>
                     <div className="uc_content padding">
                         <div className="uc_title">
-                            <a href="#">
-                                {food.attributes.name ?? ''}
-                            </a>
-                            <p className="ves">{food.attributes.massa ?? ''}</p>
-                        </div>
-                        <div
-                            className="ue-description"
-                            dangerouslySetInnerHTML={{ __html: food.attributes.calories }}
-                        ></div>
-                        <div className="ue_grid_item_bottom">
-                            <div className="ue_grid_prices">
-                                <div className="uc_price">
-                                      <span className="woocommerce-Price-amount amount">
-                                          {food.attributes.cena ?? ''}
-                                      </span>
-                                </div>
-                            </div>
-                            <div className="uc_post_flex_style_one_button">
-                            </div>
+                            <a href="#">{food.attributes.name ?? ''}</a>
+                            <p className="ves">
+                                <span className="">{`${food.attributes.cena ?? ''} / `}</span>{food.attributes.massa ?? ''}
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -114,9 +101,12 @@ export default function WidgetMenu({collectionMenu, handleShowMenu, statusMenu})
 
     const [stateMenu, setStateMenu] = useState({activeCategory: 0});
 
+    useEffect(() => {
+        document.querySelector('.widget-menu').classList.remove('close');
+    }, [""]);
 
     return (
-        <div className={`widget-menu ${statusMenu.show ? 'show' : ''}`}>
+        <div className={`widget-menu ${statusMenu.show ? 'show' : 'close'}`}>
             <nav className="navigate-menu navigate-menu__mob">
                 <CategoryList
                     list={collectionMenu}
