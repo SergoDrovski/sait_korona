@@ -51,6 +51,7 @@ function FoodList({list}) {
 
 
 export default function topMenu({ data, handleShowMenu}) {
+    if (!data) return null
     const titleMenu = delve(data, "titleMenu");
     const buttonMenu = delve(data, "buttonMenu");
     const foodList = delve(data, "foodList");
@@ -108,29 +109,6 @@ export default function topMenu({ data, handleShowMenu}) {
                 </div>
             </div>
         </section>
-    )
-}
-
-function SliderContainer({sliders}) {
-    const renderedSlide = sliders.map((slide, index) => {
-        const photo = delve(slide, "attributes");
-
-        return (
-            <div className="gallery-slide swiper-slide">
-                <Image className="gallery-img"
-                       loader={imageLoader}
-                       src={photo.url ?? ""}
-                       alt={photo.name ?? ""}
-                       width={photo.width ?? ""}
-                       height={photo.height ?? ""}
-                />
-            </div>
-        )
-    })
-    return (
-        <div className="gallery-wrapper swiper-wrapper">
-            {renderedSlide}
-        </div>
     )
 }
 

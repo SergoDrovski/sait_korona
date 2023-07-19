@@ -1,7 +1,7 @@
 import delve from "dlv";
 
 export default function preview({ data }) {
-
+    if (!data) return null
     const titlePreview = delve(data, "titlePreview");
     const descriptionPreview = delve(data, "descriptionPreview");
 

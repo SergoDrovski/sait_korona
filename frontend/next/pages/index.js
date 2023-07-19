@@ -29,7 +29,6 @@ export default function Home({homepage, categories}) {
     const collectionMenu = delve(categories, "data");
     const content = delve(homepage, "data.attributes");
 
-
     const [stateMenu, setShowMenu] = useState({show: false});
 
 

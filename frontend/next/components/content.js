@@ -26,6 +26,8 @@ export default function Content({contentData, handleShowMenu, statusMenu}) {
                 handleShowMenu={handleShowMenu}
                 statusMenu={statusMenu}
             />)
+        } else {
+
         }
     }
 

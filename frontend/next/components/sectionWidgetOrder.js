@@ -2,11 +2,8 @@ import delve from "dlv";
 import React, {useState} from "react";
 import {Form} from "@/components/form";
 
-export function widgetOrder(
-    {
-        data
-    }) {
-
+export function widgetOrder({ data }) {
+    if (!data) return null
     const titleForm = delve(data, "form.titleForm");
     return (
         <section className="book" id="order">

@@ -5,6 +5,7 @@ import {createSwiperReviews} from '@/lib/sliderConfig';
 import React, {useEffect} from "react";
 
 export default function about({ data }) {
+    if (!data) return null
     const titleAbout = delve(data, "titleAbout");
     const textAbout = delve(data, "textAbout");
     const gallery = delve(data, "gallereya.data");

@@ -4,6 +4,7 @@ import {imageLoader} from "@/lib/image";
 import {observeAnimate} from "@/lib/animate.js";
 
 export default function header({ data, handleShowMenu, statusMenu }) {
+    if (!data) return null
     const titleHeader = delve(data, "titleHeader");
     const logoImages = delve(data, "logoHeader");
 
@@ -33,8 +34,8 @@ export default function header({ data, handleShowMenu, statusMenu }) {
                     </div> }
                     <div className="logo__wrap">
                         <picture>
-                            <source media="(min-width: 768px)" srcSet="/images/logo2.svg"/>
-                            <img className="logo" src="/images/logo3_1.svg" alt="ресторан Корона"/>
+                            <source media="(min-width: 768px)" srcSet="/images/logo-new.svg"/>
+                            <img className="logo" src="/images/logo-new-mob.svg" alt="ресторан Корона"/>
                         </picture>
                     </div>
                     <div className="elem"></div>

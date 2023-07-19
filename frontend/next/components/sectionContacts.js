@@ -1,5 +1,6 @@
 import Image from 'next/image';
 export default function contacts({ data }) {
+    if (!data) return null
     return (
         <section className="contacts">
             <div className="container">
