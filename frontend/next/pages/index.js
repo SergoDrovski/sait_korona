@@ -51,12 +51,12 @@ export default function Home({homepage, categories}) {
                 <link rel="icon" href="/images/favicon2.svg"/>
             </Head>
             <Content
-                contentData={content}
+                contentData={content ?? {}}
                 handleShowMenu={handleShowMenu}
                 statusMenu={stateMenu}
             />
             <WidgetMenu
-                collectionMenu={collectionMenu}
+                collectionMenu={collectionMenu ?? []}
                 handleShowMenu={handleShowMenu}
                 statusMenu={stateMenu}
             />

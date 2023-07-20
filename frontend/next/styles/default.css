@@ -433,6 +433,7 @@ section:last-child {
     }
 
     .header--mob {
+        background-image: url(../public/images/13vert.webp);
         background-color: #f7f1e2;
         background-position: top center;
         background-repeat: no-repeat;
@@ -1053,10 +1054,11 @@ section.contacts {
     display: flex;
     opacity: 1;
     visibility: visible;
+    background-color: #f7f1e2;
     background-image: url(../public/images/13vert.webp);
     background-position: top center;
-    background-repeat: repeat;
-    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 100%;
     background-attachment: fixed;
 }
 
