@@ -9,28 +9,37 @@ function CategoryList ({list, setStateMenu, stateMenu}) {
 
     function handleChangeMenu(e) {
         e.preventDefault();
-        e.target.scrollIntoView({inline: "center", behavior: "smooth"});
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i
+            .test(navigator.userAgent)) {
+            // scroll to nav item
+            e.target.scrollIntoView({block: "nearest", inline: "center", behavior: "smooth"});
+        }
+
         let i = e.target.dataset.key;
         setStateMenu({activeCategory: i});
     }
+    const listItems = [];
+    list.forEach((category,i) => {
+        const foodsCollect = delve(category, "attributes.foods.data");
+        if(foodsCollect.length !== 0 ) {
+            const categoryName = delve(category, "attributes.name");
 
-    const listItems = list.map((category,i) => {
-
-        const categoryName = delve(category, "attributes.name");
-
-        return (
-            <li className="menu-item" key={category.id} >
-                <a
-                    data-key={i}
-                    className={Number(stateMenu.activeCategory) === i  ? 'active' : ''}
-                    href="#"
-                    onClick={handleChangeMenu}
-                >
-                    {categoryName ?? ''}
-                </a>
-            </li>
-        )
+            listItems.push((
+                <li className="menu-item" key={category.id} >
+                    <a
+                        data-key={i}
+                        className={Number(stateMenu.activeCategory) === i  ? 'active' : ''}
+                        href="#"
+                        onClick={handleChangeMenu}
+                    >
+                        {categoryName ?? ''}
+                    </a>
+                </li>
+            ))
+        }
     });
+
+
 
 
     return (
@@ -43,10 +52,41 @@ function CategoryList ({list, setStateMenu, stateMenu}) {
 
 function MenuList ({list, stateMenu}) {
 
-    let currentMenu = list[stateMenu.activeCategory];
-    let nameMenu = currentMenu.attributes.name;
+    let allMenuList = [];
+    list.forEach((category,i) => {
+        const foodsCollect = delve(category, "attributes.foods.data");
+        if(foodsCollect.length !== 0 ) {
+            const categoryName = delve(category, "attributes.name");
+            allMenuList.push((
+                <li className={`categoryItem ${Number(stateMenu.activeCategory) === i  ? 'active' : ''}`}>
+                    <h2 className="menu__title title">{categoryName ?? ''}</h2>
+                    <div className="menu__column">
+                        <ul className="menu__list">
+                            <ListItems foodsCollect={foodsCollect}/>
+                        </ul>
+                    </div>
+                </li>
+            ))
+        }
+    });
 
-    const listItems = currentMenu.attributes.foods.data.map((food,i) => {
+    return (
+        <div className={`list-menu `} >
+            <section className="menu bt">
+                <div className="container">
+                    <div className="menu__wrap">
+                        <ul>
+                            {allMenuList}
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    )
+}
+
+function ListItems ({foodsCollect}) {
+    return foodsCollect.map((food,i) => {
         return (
             <li className="menu__item" key={food.id} data-key={i}>
                 <div className="uc_post_flex_style_one_item ue-item">
@@ -74,48 +114,56 @@ function MenuList ({list, stateMenu}) {
             </li>
         )
     });
-
-
-    return (
-        <div className={`list-menu `}  key={stateMenu.activeCategory}>
-            <section className="menu bt">
-                <div className="container">
-                    <div className="menu__wrap">
-                        <h2 className="menu__title title">{nameMenu ?? ''}</h2>
-                        <div className="menu__column">
-                            <ul className="menu__list">
-                                {listItems}
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-    )
 }
 
 
 export default function WidgetMenu({collectionMenu, handleShowMenu, statusMenu}) {
-    if(collectionMenu.length === 0) return null
+    let filterCollectionMenu = collectionMenu.filter((item,i)=> {
+        let foodsCollect = delve(item, "attributes.foods.data");
+        if(foodsCollect) {
+            return foodsCollect.length !== 0
+        }
+        return false
+    })
+
+    if(filterCollectionMenu.length === 0) return null
+
 
     const [stateMenu, setStateMenu] = useState({activeCategory: 0});
-
-    useEffect(() => {
-        document.querySelector('.widget-menu').classList.remove('close');
-    }, [""]);
 
     return (
         <div className={`widget-menu ${statusMenu.show ? 'show' : 'close'}`}>
             <nav className="navigate-menu navigate-menu__mob">
+                <header className="header header--mob">
+                    <div className="content-container">
+                        <div className="header__wrap">
+                            <div className={`button-menu header__button-menu ${statusMenu.show ? 'active-button' : ''}`}>
+                                <button type="button" className={`navbar-toggle ${statusMenu.show ? 'toggled' : ''}`} data-toggle="collapse" onClick={handleShowMenu}>
+                                    <span className="sr-only">Toggle navigation</span>
+                                    <span className="icon-bar"></span>
+                                    <span className="icon-bar"></span>
+                                    <span className="icon-bar"></span>
+                                </button>
+                            </div>
+                            <div className="logo__wrap">
+                                <picture>
+                                    <source media="(min-width: 768px)" srcSet="/images/logo-new-mob.svg"/>
+                                    <img className="logo" src="/images/logo-new-mob.svg" alt="ресторан Корона"/>
+                                </picture>
+                            </div>
+                            <div className="elem"></div>
+                        </div>
+                    </div>
+                </header>
+
                 <CategoryList
-                    list={collectionMenu}
+                    list={filterCollectionMenu}
                     setStateMenu={setStateMenu}
                     stateMenu={stateMenu}
                 />
             </nav>
             <MenuList
-                list={collectionMenu}
+                list={filterCollectionMenu}
                 stateMenu={stateMenu}
             />
 

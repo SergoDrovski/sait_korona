@@ -24,8 +24,11 @@ export default function contacts({ data }) {
                                 width="22"
                                 height="22"
                             />
+                            <p className="contacts__text"
+                               dangerouslySetInnerHTML={{ __html: data.tel }}
+                            >
+                            </p>
                             <p className="contacts__text">
-                                {data.tel ?? ''}<br/>
                                 {data.email ?? ''}
                             </p>
                         </div>

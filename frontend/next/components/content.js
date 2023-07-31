@@ -31,5 +31,5 @@ export default function Content({contentData, handleShowMenu, statusMenu}) {
         }
     }
 
-    return <>{renderedSection}</>
+    return <div className={'content'}>{renderedSection}</div>
 }

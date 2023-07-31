@@ -2,7 +2,6 @@ import React, {useState, useEffect} from "react";
 import delve from "dlv";
 import Head from 'next/head'
 import WidgetMenu from '../components/widgetMenu';
-import Content from '../components/content';
 import {getStrapiData} from '@/lib/api/apiSer';
 import {scroll} from "@/lib/animate";
 import { useRouter } from 'next/router';
@@ -32,13 +31,14 @@ export default function Home({homepage, categories}) {
     const collectionMenu = delve(categories, "data");
     const content = delve(homepage, "data.attributes");
 
-    const [stateMenu, setShowMenu] = useState({show: false});
+    const [stateMenu, setShowMenu] = useState({show: true});
 
 
 
     function handleShowMenu(e) {
         e.preventDefault();
-        router.push('/menu');
+        setShowMenu({show: !stateMenu.show});
+        router.push('/');
     }
 
     return (
@@ -51,11 +51,6 @@ export default function Home({homepage, categories}) {
                 <meta name="robots" content="index,follow"/>
                 <link rel="icon" href="/images/favicon2.svg"/>
             </Head>
-            <Content
-                contentData={content ?? {}}
-                handleShowMenu={handleShowMenu}
-                statusMenu={stateMenu}
-            />
             <WidgetMenu
                 collectionMenu={collectionMenu ?? []}
                 handleShowMenu={handleShowMenu}
