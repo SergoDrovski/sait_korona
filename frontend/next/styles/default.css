@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
 @font-face {
     font-family: "GothamMedium";
-    src: url("../public/fonts/GothamMedium.woff") format("woff"),
-    url("../public/fonts/GothamMedium.woff2") format("woff2"),
-    url("../public/fonts/GothamMedium.ttf") format("truetype");
+    src: url("/fonts/GothamMedium.woff") format("woff"),
+    url("/fonts/GothamMedium.woff2") format("woff2"),
+    url("/fonts/GothamMedium.ttf") format("truetype");
 }
 @font-face {
     font-family: "GothamBold";
-    src: url("../public/fonts/GothamBold.woff") format("woff"),
-    url("../public/fonts/GothamBold.woff2") format("woff2"),
-    url("../public/fonts/GothamBold.ttf") format("truetype");
+    src: url("/fonts/GothamBold.woff") format("woff"),
+    url("/fonts/GothamBold.woff2") format("woff2"),
+    url("/fonts/GothamBold.ttf") format("truetype");
 }
 
 :root {
@@ -29,7 +29,7 @@ body {
     line-height: 26px;
     font-weight: 700;
     /* background-color: #050505; */
-    background-image: url(../public/images/13.webp);
+    background-image: url(/images/13.webp);
     background-position: top right;
     background-repeat: no-repeat;
     background-size: cover;
@@ -52,13 +52,13 @@ body {
 
 /*body::before {*/
 /*    left: 0;*/
-/*    background-image: url(../public/images/left_lipnina2.png);*/
+/*    background-image: url(/images/left_lipnina2.png);*/
 /*}*/
 
 
 /*body::after {*/
 /*    right: 0;*/
-/*    background-image: url(../public/images/right_lipnina2.png);*/
+/*    background-image: url(/images/right_lipnina2.png);*/
 /*}*/
 
 img {
@@ -425,14 +425,14 @@ section:last-child {
 
 @media (max-width: 767px) {
     body {
-        background-image: url(../public/images/13vert.webp);
+        background-image: url(/images/13vert.webp);
         background-position: top right;
         background-repeat: repeat;
         background-size: 100%;
     }
 
     .header--mob {
-        background-image: url(../public/images/13vert.webp);
+        background-image: url(/images/13vert.webp);
         background-color: #f7f1e2;
         background-position: top center;
         background-repeat: no-repeat;
@@ -462,13 +462,13 @@ section:last-child {
 
     .header--mob::before {
         left: 0;
-        background-image: url(../public/images/left_lipnina2.png);
+        background-image: url(/images/left_lipnina2.png);
     }
 
 
     .header--mob::after {
         right: 0;
-        background-image: url(../public/images/right_lipnina2.png);
+        background-image: url(/images/right_lipnina2.png);
     }
 
     .header__wrap {
@@ -1194,13 +1194,13 @@ section.contacts {
 
     body::before {
         left: 0;
-        background-image: url(../public/images/left_lipnina2.png);
+        background-image: url(/images/left_lipnina2.png);
     }
 
 
     body::after {
         right: 0;
-        background-image: url(../public/images/right_lipnina2.png);
+        background-image: url(/images/right_lipnina2.png);
     }
 
 
