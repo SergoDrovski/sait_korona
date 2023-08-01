@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Script from "next/script";
 export default function contacts({ data }) {
     if (!data) return null
     return (
@@ -7,12 +8,11 @@ export default function contacts({ data }) {
                 <div className="contacts__wrap bt">
                     <h2 className="contacts__title title">{data.title ?? ''}</h2>
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2409.631278952093!2d39.07922755867341!3d44.09262846722271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40f3ff0da48a6625%3A0x6a65ac4be1f3d3e4!2z0YPQuy4g0JPQsNCz0LDRgNC40L3QsCwgMjUsINCi0YPQsNC_0YHQtSwg0JrRgNCw0YHQvdC-0LTQsNGA0YHQutC40Lkg0LrRgNCw0LksINCg0L7RgdGB0LjRjywgMzUyODAw!5e0!3m2!1sru!2sge!4v1688973420409!5m2!1sru!2sge"
-                        width="600"
+                        src="https://yandex.ru/map-widget/v1/?um=constructor%3Adbc7dc0e75bf3c2e50707a94afd3b380d809d61dc361e3db8f154c69853dbd14&amp;source=constructor"
+                        width="100%"
                         height="450"
-                        allowFullScreen=""
                         loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
+                        frameBorder="0"
                         className="map"
                     ></iframe>
                     <div className="contacts__inner">

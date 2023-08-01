@@ -7,7 +7,7 @@
   "options": {},
   "attributes": {
     "tel": {
-      "type": "string"
+      "type": "text"
     },
     "email": {
       "type": "email"

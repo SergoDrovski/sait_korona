@@ -16,7 +16,7 @@ export default function preview({ data }) {
                         {descriptionPreview ?? ''}
                     </p>
                     <div className="btn-wrap btn-outer-outline">
-                        <a className="preview__btn btn" href="#order">
+                        <a className="preview__btn btn" href={data.buttonPreview.url ?? ''}>
                                 <span className="book__btn-icon btn-icon"
                                 ><svg
                                     width="20"

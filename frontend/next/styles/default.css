@@ -817,7 +817,7 @@ section:last-child {
 /* ------------------contacts------------------ */
 
 section.contacts {
-    margin-bottom: 0;
+    margin-bottom: 15px;
 }
 
 .map {
@@ -911,11 +911,19 @@ section.contacts {
     flex-direction: column;
 }
 
-.content + .widget-menu {
+.content + .widget-menu.close {
     visibility: hidden;
     opacity: 0;
     width: 1px;
     height: 1px;
+    position: absolute;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .widget-menu.close {
