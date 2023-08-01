@@ -11,7 +11,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'api.good-fairy.ru',
+        hostname: 'api.koronatuapse.ru',
         port: '',
       },
     ],
