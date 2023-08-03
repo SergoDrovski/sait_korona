@@ -1052,7 +1052,6 @@ section.contacts {
 
 .widget-menu.show .list-menu {
     animation: bottom-menu 1.5s 1;
-    background-color: #ffffff70;
 }
 
 .widget-menu.close .navigate-menu {
@@ -1217,7 +1216,6 @@ section.contacts {
 
     .widget-menu.show .list-menu {
         animation: right-menu 1.5s 1;
-        background-color: #ffffff70;
     }
 
     .widget-menu.close .navigate-menu {

@@ -34,8 +34,8 @@ export default function header({ data, handleShowMenu, statusMenu }) {
                     </div> }
                     <div className="logo__wrap">
                         <picture>
-                            <source media="(min-width: 768px)" srcSet="/images/logo-new.svg"/>
-                            <img className="logo" src="/images/logo-new-mob.svg" alt="ресторан Корона"/>
+                            <source media="(min-width: 768px)" srcSet="/images/logo-new2.svg"/>
+                            <img className="logo" src="/images/logo-new-mob2.svg" alt="ресторан Корона"/>
                         </picture>
                     </div>
                     <div className="elem"></div>
