@@ -9,10 +9,6 @@ export default function Document() {
                 src="//ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"
                 strategy="lazyOnload"
             />
-            <Script
-                src="https://www.google.com/recaptcha/api.js"
-                strategy="lazyOnload"
-            />
         </Head>
       <body>
         <Main />
