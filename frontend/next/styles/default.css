@@ -29,7 +29,7 @@ body {
     line-height: 26px;
     font-weight: 700;
     /* background-color: #050505; */
-    background-image: url(/images/13.webp);
+    background-image: url(/images/13-min.webp);
     background-position: top right;
     background-repeat: no-repeat;
     background-size: cover;
@@ -425,14 +425,14 @@ section:last-child {
 
 @media (max-width: 767px) {
     body {
-        background-image: url(/images/13vert.webp);
+        background-image: url(/images/13vert-min.webp);
         background-position: top right;
         background-repeat: repeat;
         background-size: 100%;
     }
 
     .header--mob {
-        background-image: url(/images/13vert.webp);
+        background-image: url(/images/13vert-min.webp);
         background-color: #f7f1e2;
         background-position: top center;
         background-repeat: no-repeat;
@@ -950,6 +950,7 @@ section.contacts {
 .list-menu .menu__list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .uc_post_flex_style_one_item {
@@ -986,8 +987,8 @@ section.contacts {
 }
 
 .uc_post_image img {
-    height: auto;
-    object-fit: contain;
+    height: 350px;
+    object-fit: cover;
 }
 
 .uc_post_image img {
@@ -1276,6 +1277,7 @@ section.contacts {
         margin-bottom: 20px;
         max-width: 400px;
         width: 50%;
+        justify-content: center;
     }
     .list-menu .menu__list {
         justify-content: center;
