@@ -1279,7 +1279,7 @@ section.contacts {
         justify-content: center;
     }
     .list-menu .menu__list {
-        justify-content: center;
+        justify-content: space-evenly;
     }
 
     .navbar-toggle .icon-bar {
