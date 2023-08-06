@@ -1273,7 +1273,7 @@ section.contacts {
 
     .widget-menu .menu__item {
         display: flex;
-        margin-bottom: 20px;
+        margin: 10px 5px 20px 5px;
         max-width: 400px;
         width: 50%;
         justify-content: center;
